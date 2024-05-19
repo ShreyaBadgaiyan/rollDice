@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'gradient_container.dart';
+
 void main(){//Defining the function
 //need not be called,entry point of app,automatically executes
   runApp( MaterialApp(
@@ -7,23 +9,7 @@ void main(){//Defining the function
 
      // backgroundColor: Color.fromARGB(100, 100, 220, 224),
       
-      body: Container(
-        decoration: BoxDecoration(
-
-          gradient: LinearGradient(
-              colors: [
-                Color(0xFF0E1064FF),
-                Color(0xFF0D460DFF),
-              ]
-
-          )
-        ),
-        child: Center(
-          child: Text(
-            'Hello World'
-          ),
-        ),
-      ),
+      body: GradientContainer()
     ),
     //const is added to help Dart optimize the runtime performance
     //when const is added to a widget it is only added to the memory ones and second time memory is reused
@@ -38,3 +24,4 @@ void main(){//Defining the function
   //Container can't be added const
   //List is created as []
 }
+
