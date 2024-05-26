@@ -3,34 +3,40 @@ import 'package:roll_dice/styled_text.dart';
 
 int? integer;
 Alignment? alg;
-var startAlign=Alignment.centerLeft;
-var endAlign=Alignment.topRight;
+const startAlign=Alignment.centerLeft;
+const endAlign=Alignment.topRight;
+
+//const helps in internal performance optimization
+
 
 class GradientContainer extends StatelessWidget{
   //extending stateless widget adds a lot of data and logic to our class that we are creating of our own.
+  Color color1;
+  Color color2;
 
-  GradientContainer({super.key}){
+  GradientContainer(this.color1,this.color2,{super.key}){
     //initialization work
   }
   @override
   //override is not required much but just means that you are over writing a method which is required by the stateless widget class.
 
   Widget build(context){
-
     return Container(
       decoration: BoxDecoration(
 
           gradient: LinearGradient(
-              colors: const [
-                Colors.black,
-                Colors.white,
+              colors: [
+                color1,
+                color2,
               ],
               begin:  startAlign,
               end: endAlign,
 
           )
       ),
-      child: StyledText(),
+      child:  Center(
+        child:Image.asset('assets/images/dice-2.pg',width:200)
+      ),
     );
   }
 
@@ -40,4 +46,5 @@ class GradientContainer extends StatelessWidget{
 // return gives flutter the access to use the widget u are mal=king
 //Named parameters are added this way {} inside curly braces
 // super refers to the parent class
+
 }

@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-
 import 'gradient_container.dart';
 
-void main(){//Defining the function
-//need not be called,entry point of app,automatically executes
+void main(){
+  //Defining the function
+  //need not be called,entry point of app,automatically executes
   runApp( MaterialApp(
     home: Scaffold(
 
      // backgroundColor: Color.fromARGB(100, 100, 220, 224),
-      
-      body: GradientContainer()
+        body: GradientContainer(Colors.black,Colors.white)
     ),
     //const is added to help Dart optimize the runtime performance
     //when const is added to a widget it is only added to the memory ones and second time memory is reused
