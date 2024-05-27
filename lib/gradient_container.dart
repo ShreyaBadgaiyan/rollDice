@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roll_dice/dice_roller.dart';
 import 'package:roll_dice/styled_text.dart';
 
 int? integer;
@@ -14,9 +15,11 @@ class GradientContainer extends StatelessWidget{
   Color color1;
   Color color2;
 
+
   GradientContainer(this.color1,this.color2,{super.key}){
     //initialization work
   }
+
   @override
   //override is not required much but just means that you are over writing a method which is required by the stateless widget class.
 
@@ -34,8 +37,8 @@ class GradientContainer extends StatelessWidget{
 
           )
       ),
-      child:  Center(
-        child:Image.asset('assets/images/dice-2.pg',width:200)
+      child:  const Center(
+        child: DiceRoller()
       ),
     );
   }
